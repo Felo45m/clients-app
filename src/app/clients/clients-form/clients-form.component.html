@@ -18,12 +18,12 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" *ngIf="client.id">
       <div class="col-md-6">
         <div class="form-group">
 
           <label>ID:</label>
-          <input type="text" class="form-control"  [ngModel]="client.id" disabled="true"/>
+          <input type="text" [ngModel]="client.id" name="id" class="form-control" disabled="true"/>
 
         </div>
       </div>
