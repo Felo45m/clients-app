@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Client } from '../client';
 import { ClientsService } from '../../clients.service'
 
+
 @Component({
   selector: 'clients-form',
   templateUrl: './clients-form.component.html',
@@ -27,6 +28,9 @@ export class ClientsFormComponent implements OnInit{
         .saveClient(this.client)
         .subscribe( response => {
           this.success = true;
-        })
+        }, errorResponse => {
+          this.errors = errorResponse.error.errors
+        }
+        )
   }
 }
