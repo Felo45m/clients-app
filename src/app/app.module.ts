@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component'
 import { ClientsModule } from './clients/clients.module';
 import { ClientsService } from './clients.service'
 import { ServicoPrestadoModule } from './servico-prestado/servico-prestado.module'
+import { ServicoPrestadoService } from './servico-prestado.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ServicoPrestadoModule } from './servico-prestado/servico-prestado.modul
     ServicoPrestadoModule
   ],
   providers: [
-    ClientsService
+    ClientsService,
+    ServicoPrestadoService
   ],
   bootstrap: [AppComponent]
 })
