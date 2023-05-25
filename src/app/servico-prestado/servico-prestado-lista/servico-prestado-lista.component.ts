@@ -18,4 +18,7 @@ export class ServicoPrestadoListaComponent implements OnInit{
   ngOnInit(): void {
   }
 
+  consultar(){
+    console.log(this.name, this.month)
+  }
 }
