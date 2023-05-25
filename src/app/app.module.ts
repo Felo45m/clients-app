@@ -9,7 +9,7 @@ import { TemplateModule } from './template/template.module';
 import { HomeComponent } from './home/home.component'
 import { ClientsModule } from './clients/clients.module';
 import { ClientsService } from './clients.service'
-import { ServicesModule } from './services/services.module'
+import { ServicoPrestadoModule } from './servico-prestado/servico-prestado.module'
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { ServicesModule } from './services/services.module'
     AppRoutingModule,
     TemplateModule,
     ClientsModule,
-    ServicesModule
+    ServicoPrestadoModule
   ],
   providers: [
     ClientsService

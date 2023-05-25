@@ -1,16 +1,16 @@
-<h1 class="mt-4">Serviços</h1>
+<h1 class="mt-4">Serviço Prestado</h1>
 <ol class="breadcrumb mb-4">
   <li class="breadcrumb-item active">Novo</li>
 </ol>
 <div class="container">
-  <form #form="ngForm" (submit)="onSubmit">
+  <form #form="ngForm" (submit)="onSubmit()">
     <div class="row">
       <div class="col-md-12">
         <div class="form-group">
           <label>
             Client:
           </label>
-          <select class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="service.clientId">
+          <select class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="servico.clientId">
             <option value="">Selecione...</option>
             <option *ngFor="let client of clients" [ngValue]="client.id">
               {{ client.name }}
@@ -26,7 +26,7 @@
           <label>
             Descrição
           </label>
-          <input class="form-control" [(ngModel)]="service.description" type="text" name="description" id="inputDescription">
+          <input class="form-control" [(ngModel)]="servico.description" type="text" name="description" id="inputDescription">
         </div>
       </div>
     </div>
@@ -37,7 +37,7 @@
           <label>
             Data
           </label>
-          <input class="form-control" [(ngModel)]="service.date" type="text" name="date" id="inputDate">
+          <input class="form-control" [(ngModel)]="servico.date" type="text" name="date" id="inputDate">
         </div>
       </div>
 
@@ -46,7 +46,7 @@
           <label>
             Preço
           </label>
-          <input class="form-control" [(ngModel)]="service.price" type="text" name="price" id="inputPrice">
+          <input class="form-control" [(ngModel)]="servico.price" type="text" name="price" id="inputPrice">
         </div>
       </div>
     </div>

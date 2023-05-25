@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from 'src/app/clients/client';
 import { ClientsService } from '../../clients.service'
-import { Services } from '../services';
-
+import { ServicoPrestado } from '../servicoPrestado';
 
 @Component({
   selector: 'app-services-form',
-  templateUrl: './services-form.component.html',
-  styleUrls: ['./services-form.component.css']
+  templateUrl: './servico-prestado-form.component.html',
+  styleUrls: ['./servico-prestado-form.component.css']
 })
-export class ServicesFormComponent implements OnInit{
+export class ServicoPrestadoFormComponent implements OnInit{
 
   clients: Client[] = []
-  service: Services;
+  servico: ServicoPrestado;
 
   constructor(private clientService: ClientsService) {
-    this.service = new Services();
+    this.servico = new ServicoPrestado();
   }
 
   ngOnInit(): void {
@@ -23,7 +22,7 @@ export class ServicesFormComponent implements OnInit{
   }
 
   onSubmit() {
-    console.log(this.service)
+    console.log(this.servico)
   }
 
 }
