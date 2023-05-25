@@ -57,8 +57,7 @@ export class ClientsFormComponent implements OnInit{
       }, errorResponse => {
         this.success = false;
         this.errors = errorResponse.error.errors
-      }
-      )
+      })
 
     }
   }
