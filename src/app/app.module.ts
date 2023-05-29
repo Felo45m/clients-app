@@ -13,12 +13,14 @@ import { ClientsService } from './clients.service'
 import { ServicoPrestadoModule } from './servico-prestado/servico-prestado.module'
 import { ServicoPrestadoService } from './servico-prestado.service';
 import { LoginComponent } from './login/login.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
